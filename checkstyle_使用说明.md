@@ -69,3 +69,13 @@ Checkstyle 是一个自动化检查java代码编码规范的工具，可以检�
 5. 在<build>中使用内联的checker 配置，详情见pom1.xml 文件。
 
 更多的使用细节请参加Apache Maven 官网： http://maven.apache.org/plugins/maven-checkstyle-plugin/
+
+************************************************************************************************
+checkstyle 生成的html 报告中只会显示不符合要求的代码在哪一行，并不能直接查看代码，为解决这一问题， 我们引入:
+maven-jxr-plugin:
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jxr-plugin</artifactId>
+        <version>2.5</version>
+    </plugin>
+
