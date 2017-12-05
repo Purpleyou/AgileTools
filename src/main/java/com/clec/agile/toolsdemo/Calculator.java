@@ -7,7 +7,15 @@ package com.clec.agile.toolsdemo;
  */
 
 public class Calculator {
+
+    int c;
+    String test;
+
     public static int add(int a, int b){
+        System.out.println("This is a calculator.");
+        System.out.println("Test our Agile Tools. ");
         return a + b;
     }
+
+
 }
