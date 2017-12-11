@@ -7,18 +7,18 @@ Checkstyle 是一个自动化检查java代码编码规范的工具，可以检�
 
 1. maven checkstyle plugin 中已经预置了sun_checks.xml和google_checks.xml 两个规则集，默认使用sun_checks.xml.
     我们可以使用：
-    '''
+    ```
     <configuration>
         <configLocation>google_checks.xml</configLocation>
     </configuration>
-    '''
+    ```
 进行配置，<configLocation> 中还可以指定自定义的规则集。
 
 
 2. 生成Checkstyle项目报告。
     在POM文件的<reporting> 部分添加checkstyle plugin.
     执行 mvn site 命令，查看位于target--> site --> checkstyle.html 的报告：
-    '''
+    ```
     <reporting>
         <plugins>
             <plugin>
@@ -31,9 +31,9 @@ Checkstyle 是一个自动化检查java代码编码规范的工具，可以检�
             </plugin>
         </plugins>
     </reporting>
-    '''
+    ```
 3. 如果想要在控制台输出报告或者当代码不符合编码规范时让构建失败，则需要POM文件的<build>元素中进行相应配置。
-    '''
+    ```
 	<build>
 		<plugins>
             <plugin>
@@ -58,7 +58,7 @@ Checkstyle 是一个自动化检查java代码编码规范的工具，可以检�
             </plugin>
 		</plugins>
 	</build>
-    '''
+    ```
 	<goal> 说明：
 	* checkstyle:help, 不生成报告。查看帮助。
 	* checkstyle:check, 不生成报告。检查工程是否满足编码规范，不满足则构建失败，输出违例信息或次数到控制台，
