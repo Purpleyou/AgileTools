@@ -7,10 +7,12 @@ Checkstyle 是一个自动化检查java代码编码规范的工具，可以检�
 
 1. maven checkstyle plugin 中已经预置了sun_checks.xml和google_checks.xml 两个规则集，默认使用sun_checks.xml.
     我们可以使用：
-        <configuration>
-            <configLocation>google_checks.xml</configLocation>
-        </configuration>
-    进行配置，<configLocation> 中还可以指定自定义的规则集。
+
+    <configuration>
+        <configLocation>google_checks.xml</configLocation>
+    </configuration>
+
+进行配置，<configLocation> 中还可以指定自定义的规则集。
 
 
 2. 生成Checkstyle项目报告。
