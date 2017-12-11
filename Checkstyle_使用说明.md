@@ -15,7 +15,7 @@ Checkstyle 是一个自动化检查java代码编码规范的工具，可以检�
 
 2. 生成Checkstyle项目报告。
     在POM文件的<reporting> 部分添加checkstyle plugin.
-    执行 mvn site 命令，查看位于target--> site --> checkstyle.html 的报告。
+    执行 mvn site 命令，查看位于target--> site --> checkstyle.html 的报告：
 
     <reporting>
         <plugins>
