@@ -31,7 +31,7 @@ PMD能与不同的开发环境相集成，提供以下插件：
     </plugins>
   </reporting>
   ```
-    也可以在<build>中显示执行：
+  也可以在<build>中显示执行：
   ```
   <build>
     <plugins>
@@ -43,7 +43,9 @@ PMD能与不同的开发环境相集成，提供以下插件：
     </plugins>
   </build>
   ```
+
  3. PMD 与 CPD 报告使用同一份配置，以下为简单的示例：
+
   ```
   <reporting>
     <plugins>
@@ -68,12 +70,12 @@ PMD能与不同的开发环境相集成，提供以下插件：
     </plugins>
   </reporting>
   ```
-   其中， <minimumTokens> 属性是CPD 的配置，它用于定义被判定为重复代码段的最短长度。 这个值越小，代码重复度
-   就越大。
-   关于规则集：maven-pmd-plugin 默认使用以下三个规则集： java-basic, java-imports, java-unusedcode.
-   如果想要检测出特定的某种问题，需要进一步配置 property rulesets.
+    其中， <minimumTokens> 属性是CPD 的配置，它用于定义被判定为重复代码段的最短长度。 这个值越小，代码重复度
+    就越大。
+    关于规则集：maven-pmd-plugin 默认使用以下三个规则集： java-basic, java-imports, java-unusedcode.
+    如果想要检测出特定的某种问题，需要进一步配置 property rulesets.
 
- 4. PMD Maven Plugin 默认在没有violation 的时候不生成报告。可以查看pmd.xml 以及 cpd.xml 来判定是否存在violation.
+4. PMD Maven Plugin 默认在没有violation 的时候不生成报告。可以查看pmd.xml 以及 cpd.xml 来判定是否存在violation.
   ```
   <configuration>
     <skipEmptyReport>false</skipEmptyReport>
